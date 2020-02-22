@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+    <meta name="referrer" content="no-referrer">
+    <title>点直播演示- by soldierxue</title>
+    <style type="text/css">
+        html, body {width:100%;height:100%;margin:auto;overflow: hidden;}
+        body {display:flex;}
+        #mse {flex:auto;}
+      </style>
+      <script type="text/javascript">
+        window.addEventListener('resize',function(){document.getElementById('mse').style.height=window.innerHeight+'px';});
+      </script>    
+  </head>
+  <body>
+    <h2>MP4 点播播放 - 基于西瓜播放器演示</h2>
+    <div id="mse"></div>
+    <script src="//cdn.jsdelivr.net/npm/xgplayer/browser/index.js" charset="utf-8"></script>
+    <script src="//cdn.jsdelivr.net/npm/xgplayer-mp4/browser/index.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      let player=new Player({
+        id: 'mse',
+        autoplay: true,
+        volume: 0.3,
+        url:'https://xyzy.nwcdclub.cn/videos/media4-1080p.mp4',
+        poster: "https://xyzy.nwcdclub.cn/img/livestream/media4poster.png",
+        playsinline: true,
+        thumbnail: {
+            pic_num: 44,
+            width: 160,
+            height: 90,
+            col: 10,
+            row: 10,
+            urls: ['https://xyzy.nwcdclub.cn/img/livestream/media4poster.png'],
+        },
+        danmu: {
+          comments: [
+            {
+              duration: 15000,
+              id: '1',
+              start: 3000,
+              txt: '长弹幕长弹幕长弹幕长弹幕长弹幕',
+              style: {  //弹幕自定义样式
+                color: '#ff9500',
+                fontSize: '20px',
+                border: 'solid 1px #ff9500',
+                borderRadius: '50px',
+                padding: '5px 11px',
+                backgroundColor: 'rgba(255, 255, 255, 0.1)'
+              }
+            }
+          ],
+          area: {
+            start: 0,
+            end: 1
+          }
+        },
+        height: window.innerHeight,
+        width: window.innerWidth,
+        whitelist: ['']
+      });
+      player.emit('resourceReady', [{ name: '超清', url: 'https://xyzy.nwcdclub.cn/videos/media4-1080p.mp4' }, { name: '高清', url: 'https://xyzy.nwcdclub.cn/videos/media4-720p.mp4' }, { name: '标清', url: 'https://xyzy.nwcdclub.cn/videos/media4-480p.mp4' }]);
+    </script>
+  </body>
+</html>
