@@ -55,16 +55,19 @@ html,body{color:black}#wrapper{font:16px helvetica,arial,freesans,clean,sans-ser
 <b>演示本地 ffmpeg 推流，视频源为固定的本地 mp4 视频，点击<a href="https://xyzy.nwcdclub.cn/player/h5player-mp4.html">直接浏览器 HTML5 播放源 mp4 视频</a>：</b>
 <ul>
     <li>
-        <a href="https://xyzy.nwcdclub.cn/player/h5player-flv.html">HTML5播放-HTTP-FLV</a>
+        <a href="https://xyzy.nwcdclub.cn/player/nginx-dash.html">HTML5播放器：接受播放透过 Nginx + RTMP 支持的直播流，DASH 方式 </a>
     </li>
     <li>
-        <a href="https://xyzy.nwcdclub.cn/player/h5player-hls.html">HTML5播放-HLS</a>
+        <a href="https://xyzy.nwcdclub.cn/player/nginx-hls.html">HTML5播放器：接受播放透过 Nginx + RTMP 支持的直播流，HLS 方式 </a>
     </li>
     <li>
-        <a href="https://xyzy.nwcdclub.cn/player/h5player-dash.html">HTML5播放-MPGE-DASH</a>
+        <a href="https://xyzy.nwcdclub.cn/player/srs-flv.html">HTML5播放器：接受播放透过 SRS 支持的直播流，HTTP-FLV 方式 </a>
     </li>
     <li>
-        如果使用自己的 播放器比如 VLS，可以尝试如下 RTMP 播放地址：[rtmp://xyzy.nwcdclub.cn/live/stream]
+        <a href="https://xyzy.nwcdclub.cn/player/srs-obs.html">HTML5播放器：OBS推流到 SRS，HTTP-FLV 拉流播放 </a>
+    </li>
+    <li>
+        SRS Flash 播放器：接受播放透过 SRS 支持的直播流，RTMP 方式 （需要暴露 EC2 实例的公有 IP，还没想好比较好的管控措施，故暂时不提供 RTMP 播放地址
     </li>
 </ul>
 
@@ -76,6 +79,12 @@ html,body{color:black}#wrapper{font:16px helvetica,arial,freesans,clean,sans-ser
     <li>
         <a href="">如何构建一套属于自己的直播平台？</a>
     </li>
+    <li>
+        <a href="https://docs.peer5.com/guides/setting-up-hls-live-streaming-server-using-nginx/">Setting up HLS live streaming server using NGINX + nginx-rtmp-module on Ubuntu</a>
+        <a href="https://github.com/ossrs/srs">Simple RTMP Server (Github 主页）</a>
+        <a href="https://github.com/arut/nginx-rtmp-module">nginx-rtmp-module  (Github 主页）</a>
+    </li>
+   
 </ul>
 <!-- ##END MARKED WRAPPER## -->
     </div>
