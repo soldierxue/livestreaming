@@ -15,19 +15,23 @@
       </script>
   </head>
   <body>
-    <h2>HLS 直播流播放 - 基于西瓜播放器演示</h2>
+      <h2>FLV 直播流播放 - 基于西瓜播放器演示(OBS 从 Mac 实时上推流）</h2>
     <div id="mse"></div>
     <script src="//cdn.jsdelivr.net/npm/xgplayer@1.1.4/browser/index.js" charset="utf-8"></script>
-      <script src="//cdn.jsdelivr.net/npm/xgplayer-hls.js/browser/index.js" charset="utf-8"></script><script>
-      let player = new HlsJsPlayer({
-		"id": "mse",
-		url: 'http://10.8.123.179:8080/live/liveStream.m3u8',
-		"playsinline": true,
-        "autoplay": true,
-		"screenShot": true,
-		"poster": "https://xyzy.nwcdclub.cn/img/livestream/media4poster.png"
-      });
+      <script src="//cdn.jsdelivr.net/npm/xgplayer-flv.js/browser/index.js" charset="utf-8"></script>
+      <script type="text/javascript">
+      let player = new FlvJsPlayer({
+        "id": "mse",
+            "isLive": true,
+        "url": "http://xyzy.nwcdclub.cn/live/obs.flv",
+        "playsinline": true,
+        "screenShot": true,
+            "autoplay": true,
+        "poster": "https://xyzy.nwcdclub.cn/img/livestream/media4poster.png"
+          });
       
-          </script>
+    </script>
+
+
   </body>
 </html>
