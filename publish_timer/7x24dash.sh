@@ -5,7 +5,7 @@
 #### jobs -l
 
 count=1
-while [ $count -lt 2400 ]
+while [ $count -lt 24000 ]
 do
    echo "第 $count 次循环直播："
 
