@@ -8,7 +8,7 @@
     <style type="text/css">
       html, body {width:100%;height:100%;margin:auto;overflow: hidden;}
       body {display:flex;}
-      #mse {flex:auto;margin-top: 64px;background-color: #000;display: flex;justify-content: center;align-items: center;}
+      #mse {flex:auto;}
 
     </style>
     <script type="text/javascript">
@@ -16,7 +16,6 @@
     </script>
   </head>
   <body>
-      <h2>MPEG-DASH 直播流播放 - 基于西瓜播放器演示</h2>
       <header style="background-color:#000;position:fixed;top:0;left:0;width:100%;z-index:999;box-sizing:boarder-box;height:64px;line-height:64px;margin:0;padding:0;">
           <div id="nav_links" style="display: inline-block;position: absolute;text-align: center;height: 100%;left: 50;color: hsla(0,0%,100%,.7);">
             <div style="cursor: pointer;position: relative;display: inline-block;margin-left: 20px;line-height: 21px;transform:translateY(2px);vertical-align:middle;">
@@ -34,7 +33,10 @@
           </a> 
       
       </header>
-      <div id="mse"></div>
+      <div id="content" style="margin-top: 64px;background-color: #000;display: block;justify-content: center;align-items: center;max-width: 3000px!important;margin: 0!important;width: 100%!important;height: 100%!important;">
+        <div id="mse"></div>
+      </div>
+      
       <script src="//cdn.jsdelivr.net/npm/xgplayer@1.1.4/browser/index.js" charset="utf-8"></script>
       <script src="//cdn.jsdelivr.net/npm/xgplayer-shaka/browser/index.js" charset="utf-8"></script>
       <script>
