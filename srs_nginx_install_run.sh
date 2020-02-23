@@ -10,7 +10,13 @@ sudo apt install libnginx-mod-rtmp
 ## 参考：./nginx_conf/nginx.conf
 sudo vi /etc/nginx/nginx.conf
 
-# 启动 nginx + rtmp 模块
+# 下载 演示站点的 Web 页面包含播放器页面
+git clone https://github.com/soldierxue/livestreaming
+
+# 将页面复制到所配置的根目录中
+sudo cp -r livestreaming/* /var/www/nwcdclub.cn/
+
+# 启动 nginx 服务器
 sudo systemctl restart nginx
 
 #######################
